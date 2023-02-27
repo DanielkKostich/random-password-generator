@@ -1,7 +1,7 @@
 // Assignment code here 
 function generatePassword() {
   var length = 8,
-      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&+",
       retVal = "";
   for (var i = 0, n = charset.length; i < length; ++i) {
       retVal += charset.charAt(Math.floor(Math.random() * n));
@@ -14,12 +14,40 @@ var generateButton = document.createElement("button");
 
 document.querySelector('#generate').addEventListener('click', promptMe);
 
-function promptMe() {
-    var number = prompt("Password length 8-128 characters");
-    var type = prompt("Character type");
-    
-}
 
+function promptMe(){
+     	  
+      var num = prompt("password lenth");
+      
+  if (!isNaN(num)){  
+   
+    var char = prompt("Char type")
+  
+  if (char == null){
+      alert("invalid")
+      promptMe()
+  }
+  if (!isNaN(char) ){
+    alert("invalal")
+    promptMe()
+}
+}
+   
+  
+  else { alert("Invalid Input.") 
+      promptMe()
+    }
+
+   
+  
+
+
+
+      
+  }
+
+
+const value = document.querySelector("prompt")
 
 
 
