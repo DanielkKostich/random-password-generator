@@ -7,7 +7,7 @@ function generatePassword() {
   var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   var numericCase = "0123456789"
   var specialCase = "!@#$%&+"
-  var long = window.prompt("How long? 8-128")
+  var long = window.prompt("How long? 8-128 characters")
   if (long < 8 || long > 128 || isNaN(long) ){
     window.alert("Invalid") 
     return ""
@@ -34,7 +34,7 @@ function generatePassword() {
   }
 
 if (useLower + useUpper + useNumeric + useSpecial  <1){
-  window.alert("Please choose on type")
+  window.alert("Please choose at least one type of character")
 }
   
   for (var i = 0; i < long; i++) {
@@ -47,32 +47,6 @@ var generateButton = document.createElement("button");
 
 
 
-
-// function promptMe(){
-
-//       var num = prompt("password lenth");
-
-//   if (!isNaN(num)){  
-
-//     var char = prompt("Char type")
-
-//   if (char == null){
-//       alert("invalid")
-//       promptMe()
-//   }
-//   if (!isNaN(char) ){
-//     alert("invalal")
-//     promptMe()
-// }
-// }
-
-
-//   else { alert("Invalid Input.") 
-//       promptMe()
-//     }
-
-
-//   }
 
 
 
